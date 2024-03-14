@@ -116,6 +116,6 @@ if submit_button:
     model = load("XGB.joblib")
     prediction = model.predict(user_prediction)
     if prediction == 0:
-        st.markdown("##Congratulations, you are not at risk of Cardiovascular Diseases.")
+        st.markdown("## Congratulations, you are not at risk of Cardiovascular Diseases.")
     elif prediction == 1:
-        st.wmarkdown("##I am sorry to inform you that you are at the risk of Cardiovascular diseases.")
+        st.wmarkdown("## I am sorry to inform you that you are at the risk of Cardiovascular diseases.")
