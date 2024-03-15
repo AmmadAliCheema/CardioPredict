@@ -31,6 +31,10 @@ with st.form(key='user_input_form'):
     weight = st.number_input("Please enter your weight in Kilogram", min_value=0.0, format="%0.2f")
     ap_hi = st.number_input("Please enter Systolic Blood Pressure", min_value=0)
     ap_lo = st.number_input("Please enter Diastolic Blood Pressure", min_value=0)
+    if height > 0:
+        bmi = weight / (height / 100) ** 2
+    else:
+        bmi = 0  
     
     
     cholesterol = st.radio("Do you have Cholesterol", options=["Select", "Normal", "High", "Exceptionally high"])
@@ -98,7 +102,8 @@ if submit_button:
         "gluc": gluc,
         "smoke": smoke,
         "alco": alco,
-        "active": active
+        "active": active,
+        "bmi" : bmi
     }
 
     # Convert the dictionary to a DataFrame
