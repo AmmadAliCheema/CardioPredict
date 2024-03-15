@@ -115,7 +115,7 @@ if submit_button:
     # Optionally display the updated DataFrame
   
 
-    user_prediction = new_df[["age","gender","height","weight","ap_hi","ap_lo","cholesterol","gluc","smoke","alco","active"]]
+    user_prediction = new_df[["age","gender","height","weight","ap_hi","ap_lo","cholesterol","gluc","smoke","alco","active","bmi"]]
 
 
     model = load("XGB.joblib")
